@@ -20,7 +20,7 @@ while getopts "he:vjsb" opt; do
             usage
             ;;
         e)
-            $ENV=$OPTARG
+            IWS_ENV=$OPTARG
             ;;
         v)
             VALIDATE_ONLY=true
@@ -50,15 +50,15 @@ shift $((OPTIND - 1)) # Remove processed flags from positional parameters
 . /u02/tws/twa_env.sh
 TWS_HOME=/u02/tws/TWS/
 
-if [ -z "$ENV" ]; then
+if [ -z "$IWS_ENV" ]; then
     print "Environment not specified. Use -e option to specify the environment."
     usage
-elif [ "$ENV" != "PROD" ] && [ "$ENV" != "TEST" ]; then
-    print "Invalid environment specified: $ENV. Use 'PROD' or 'TEST'."
+elif [ "$IWS_ENV" != "PROD" ] && [ "$IWS_ENV" != "TEST" ]; then
+    print "Invalid environment specified: $IWS_ENV. Use 'PROD' or 'TEST'."
     usage
-elif [ $ENV = "PROD" ]; then
+elif [ "$IWS_ENV" = "PROD" ]; then
     WORKSTATION="MSTRO-PRD-APP_XA"
-elif [ $ENV = "TEST" ]; then
+elif [ "$IWS_ENV" = "TEST" ]; then
     WORKSTATION="MSTRO-TST-APP_XA"
 fi
 
@@ -85,7 +85,7 @@ if [ "$LOAD_SCHEDULES" = true ]; then
         ${TWS_HOME}/bin/composer validate scheds.def
     else
         print "Loading schedule definitions..."
-        ${TWS_HOME}/bin/datamigrate -schedules "scheds.def" -switchdb
+        ${TWS_HOME}/bin/datamigrate -scheds "scheds.def" -switchdb
         if [ ${?} -ne 0 ]; then exit 1; fi
     fi
 fi

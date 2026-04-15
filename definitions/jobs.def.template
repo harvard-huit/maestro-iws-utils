@@ -1,28 +1,28 @@
 $JOBS
 
 /WORKSTATION_DEF#DATAEXPORT
- SCRIPTNAME "^TWS-SCR^daily_dataexport.sh"
+ SCRIPTNAME "^TWS-MST-UTL^daily_dataexport.sh"
  STREAMLOGON tws
  DESCRIPTION "Backup tws data using dataexport"
  TASKTYPE UNIX
  RECOVERY STOP
 
 /WORKSTATION_DEF#FILE_BACKUPS
- SCRIPTNAME "^TWS-SCR^daily_file_backup.sh"
+ SCRIPTNAME "^TWS-MST-UTL^daily_file_backup.sh"
  STREAMLOGON tws
  DESCRIPTION "Backup symphony and configuration files"
  TASKTYPE UNIX
  RECOVERY STOP
 
 /WORKSTATION_DEF#OPTMAN_EXPORT
- SCRIPTNAME "^TWS-SCR^daily_optman_export.sh"
+ SCRIPTNAME "^TWS-MST-UTL^daily_optman_export.sh"
  STREAMLOGON tws
  DESCRIPTION "Backup optman configuration"
  TASKTYPE UNIX
  RECOVERY STOP
 
 /WORKSTATION_DEF#PLAN_PURGE
- SCRIPTNAME "^TWS-SCR^plan_log_purge.sh -e ^TWS-ENV^"
+ SCRIPTNAME "^TWS-MST-UTL^plan_log_purge.sh -e ^TWS-ENV^"
  STREAMLOGON tws
  DESCRIPTION "Purge older plan files"
  TASKTYPE UNIX

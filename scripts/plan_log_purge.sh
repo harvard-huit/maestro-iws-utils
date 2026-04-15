@@ -17,7 +17,7 @@ while getopts "he:" opt; do
             usage
             ;;
         e)
-            $ENV=$OPTARG
+            IWS_ENV=$OPTARG
             ;;
         \?) # Handles invalid options
             print "Invalid option: -${OPTARG}" >&2
@@ -33,14 +33,14 @@ shift $((OPTIND - 1)) # Remove processed flags from positional parameters
 
 set -x
 MAESTRO_DATA_HOME=/u02/tws/TWSDATA/
-if [ "$ENV" = "PROD" ]; then
+if [ "$IWS_ENV" = "PROD" ]; then
     PLAN_RETENTION_DAYS=1100
     FORECAST_PLAN_RETENTION_DAYS=3
-elif [ "$ENV" = "TEST" ]; then
+elif [ "$IWS_ENV" = "TEST" ]; then
     PLAN_RETENTION_DAYS=370
     FORECAST_PLAN_RETENTION_DAYS=3
 else
-    print "Invalid environment specified: $ENV. Use 'PROD' or 'TEST'."
+    print "Invalid environment specified: $IWS_ENV. Use 'PROD' or 'TEST'."
     exit 1
 fi
 
