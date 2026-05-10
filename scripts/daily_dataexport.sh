@@ -9,7 +9,7 @@ MAESTRO_DATA_HOME=/u02/tws/TWSDATA/
 CMD="$MAESTRO_HOME/bin/dataexport"
 BACKUP_DIR=/u02/daily_backup
 set +x
-export WA_EXPORT_PWD=$(openssl enc -aes-256-cbc -d -pbkdf2 -iter 100000 -in $MAESTRO_HOME/scripts/.secrets/password.enc -pass file:$MAESTRO_HOME/scripts/.secrets/password.key)
+export WA_EXPORT_PWD=$(openssl enc -aes-256-cbc -d -pbkdf2 -iter 100000 -in ../.secrets/password.enc -pass file:../.secrets/password.key)
 set -x
 
 #########################
