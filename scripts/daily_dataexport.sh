@@ -6,10 +6,11 @@
 set -x
 MAESTRO_HOME=/u02/tws/TWS/
 MAESTRO_DATA_HOME=/u02/tws/TWSDATA/
+MAESTRO_UTILS_HOME=/u02/maestro-iws-utils/
 CMD="$MAESTRO_HOME/bin/dataexport"
 BACKUP_DIR=/u02/daily_backup
 set +x
-export WA_EXPORT_PWD=$(openssl enc -aes-256-cbc -d -pbkdf2 -iter 100000 -in ../.secrets/password.enc -pass file:../.secrets/password.key)
+export WA_EXPORT_PWD=$(openssl enc -aes-256-cbc -d -pbkdf2 -iter 100000 -in $MAESTRO_UTILS_HOME/.secrets/password.enc -pass file:$MAESTRO_UTILS_HOME/.secrets/password.key)
 set -x
 
 #########################
