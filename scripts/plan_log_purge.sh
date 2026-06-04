@@ -32,7 +32,7 @@ done
 shift $((OPTIND - 1)) # Remove processed flags from positional parameters
 
 set -x
-MAESTRO_DATA_HOME=/u02/tws/TWSDATA/
+MAESTRO_DATA_HOME=/u02/tws/TWSDATA
 if [ "$IWS_ENV" = "PROD" ]; then
     PLAN_RETENTION_DAYS=1100
     FORECAST_PLAN_RETENTION_DAYS=3
@@ -47,6 +47,14 @@ fi
 #######################
 # Cleanup directories #
 #######################
-find $MAESTRO_DATA_HOME/schedlog -ctime +$PLAN_RETENTION_DAYS -exec rm -rf {} \;
-find $MAESTRO_DATA_HOME/schedForecast -ctime +$FORECAST_PLAN_RETENTION_DAYS -exec rm -rf {} \;
+if [ -d "$MAESTRO_DATA_HOME/schedlog" ]; then
+    find $MAESTRO_DATA_HOME/schedlog -ctime +$PLAN_RETENTION_DAYS -exec rm -rf {} \;
+else
+    print "Directory $MAESTRO_DATA_HOME/schedlog does not exist."
+fi
+if [ -d "$MAESTRO_DATA_HOME/schedForecast" ]; then
+    find $MAESTRO_DATA_HOME/schedForecast -ctime +$FORECAST_PLAN_RETENTION_DAYS -exec rm -rf {} \;
+else
+    print "Directory $MAESTRO_DATA_HOME/schedForecast does not exist."
+fi
 
