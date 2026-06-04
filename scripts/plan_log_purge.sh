@@ -47,13 +47,15 @@ fi
 #######################
 # Cleanup directories #
 #######################
+
 if [ -d "$MAESTRO_DATA_HOME/schedlog" ]; then
-    find $MAESTRO_DATA_HOME/schedlog -ctime +$PLAN_RETENTION_DAYS -exec rm -rf {} \;
+    find $MAESTRO_DATA_HOME/schedlog -ctime +$PLAN_RETENTION_DAYS -print -exec rm -rf {} \;
 else
     print "Directory $MAESTRO_DATA_HOME/schedlog does not exist."
 fi
+
 if [ -d "$MAESTRO_DATA_HOME/schedForecast" ]; then
-    find $MAESTRO_DATA_HOME/schedForecast -ctime +$FORECAST_PLAN_RETENTION_DAYS -exec rm -rf {} \;
+    find $MAESTRO_DATA_HOME/schedForecast -ctime +$FORECAST_PLAN_RETENTION_DAYS -print -exec rm -rf {} \;
 else
     print "Directory $MAESTRO_DATA_HOME/schedForecast does not exist."
 fi
