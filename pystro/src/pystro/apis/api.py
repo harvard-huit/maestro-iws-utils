@@ -6,8 +6,8 @@ import json
 import logging
 
 from pystro.config import Config, get_logger
-from pystro.model import Folder, PlanJob, Workstation, WorkstationClass
-from pystro.oql import OQLQuery, field, And, Or, Not
+from pystro.models.model import Folder, PlanJob, Workstation, WorkstationClass
+from pystro.helpers.oql import OQLQuery, field, And, Or, Not
 
 # Suppress only the InsecureRequestWarning
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)

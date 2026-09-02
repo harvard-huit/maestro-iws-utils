@@ -1,8 +1,8 @@
 import argparse
 
 from pystro.config import Config
-from pystro.api import get_plan_jobs
-from pystro.oql import OQLQuery, field
+from pystro.apis.api import get_plan_jobs
+from pystro.helpers.oql import OQLQuery, field
 from datetime import timedelta, datetime, timezone
 
 def main():

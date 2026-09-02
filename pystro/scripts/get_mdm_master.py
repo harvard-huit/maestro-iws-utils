@@ -1,7 +1,7 @@
 import argparse
 
 from pystro.config import Config, load_json
-from pystro.api import get_engine_master
+from pystro.apis.api import get_engine_master
 
 def main():
     parser = argparse.ArgumentParser(description='Retrieve the master engine from the Maestro API')

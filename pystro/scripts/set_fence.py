@@ -3,8 +3,8 @@ import sys
 import logging
 
 from pystro.config import Config, get_logger
-from pystro.api import get_workstation_class_members, get_workstations_from_list, set_fence, get_workstation_plan_id
-from pystro.model import Workstation
+from pystro.apis.api import get_workstation_class_members, get_workstations_from_list, set_fence, get_workstation_plan_id
+from pystro.models.model import Workstation
 
 def main():
     parser = argparse.ArgumentParser(description='Set the fence for a given workstation class')

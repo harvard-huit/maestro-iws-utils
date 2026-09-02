@@ -1,7 +1,7 @@
 import argparse
 
 from pystro.config import Config, load_json, get_logger
-from pystro.api import get_workstation_plan_id, get_workstations
+from pystro.apis.api import get_workstation_plan_id, get_workstations
 
 def main():
     parser = argparse.ArgumentParser(description='Create a new workstation class')

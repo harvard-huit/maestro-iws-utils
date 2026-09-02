@@ -1,7 +1,7 @@
 import argparse
 
 from pystro.config import Config, load_json, get_logger
-from pystro.api import get_folders, get_workstations, create_workstation_class, OQLQuery, field
+from pystro.apis.api import get_folders, get_workstations, create_workstation_class, OQLQuery, field
 
 def main():
     parser = argparse.ArgumentParser(description='Create workstation classes for each folder')
