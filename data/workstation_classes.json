@@ -1,0 +1,6 @@
+[
+    {"name": "LINUX_AGENT_GRP", "folder": "/", "description": "All Linux Agents", "definition": {"os": ["Unix"]}},
+    {"name": "WINDOWS_AGENT_GRP", "folder": "/", "description": "All Windows Agents", "definition": {"os": ["Windows"]}},
+    {"name": "ALL_AGENT_GRP", "folder": "/", "description": "All Agents", "definition": {}},
+    {"name": "ALL_RACS_GRP", "folder": "/RACS", "description": "All RACS", "definition": {"folder": ["/RACS"]}}
+]

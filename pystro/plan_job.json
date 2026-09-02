@@ -1,0 +1,185 @@
+{'count': 3, 'results': [
+        {'flowNodeType': 'JOB', 'id': 'aec3559c-eca1-3723-8ea6-8ca5eed2595f', 'planId': '7d65e6dd-18cd-34ee-8fb6-bfebee235f81', 'folderId': 'a4818261-bfb6-3069-a451-902fe03a5ad7', 'folder': '/RAID/', 'name': 'D-LOAD-USR-MEMBR-HART', 'workstationId': '6601b7fb-27e1-3932-8a15-f4f930d0b5dc', 'workstation': '/RAID/IDMC-SA-DEV', 'cpuFolderId': 'a4818261-bfb6-3069-a451-902fe03a5ad7', 'jobStreamId': 'b6dacf9b-b425-3492-89ed-6dc6770ad6a9', 'jobStreamName': 'D-USR-MEMBR-LD', 'jobStreamWorkstationId': '6601b7fb-27e1-3932-8a15-f4f930d0b5dc', 'jobStreamWorkstation': '/RAID/IDMC-SA-DEV', 'position': 3, 'key': 'IDMC-SA-DEV;0AAAAAAAAAAACEVO;D-LOAD-USR-MEMBR-HART', 'jobDefinitionFlags': {}, 'jobStatusFlags': {}, 'jobOptions': {'every': False
+            }, 'jobDefinition': {'name': 'D-LOAD-USR-MEMBR-HART', 'workstationId': '6601b7fb-27e1-3932-8a15-f4f930d0b5dc', 'workstation': '/RAID/IDMC-SA-DEV', 'cpuFolderId': 'a4818261-bfb6-3069-a451-902fe03a5ad7', 'taskType': 'UNIX', 'task': {'UNIX': {'taskString': '/usr/sbin/runuser -l hdw -c "/u02/app/hdw/dev/scripts/runLO.sh run_taskflow USER_MEMBERS_HART config/global/dev.toml"', 'userName': 'root'
+                    }
+                }, 'estimatedDuration': 'PT0S', 'userLogins': ['root'
+                ], 'recoveryOption': 'STOP', 'recoveryRepeatOccurrences': 1, 'recoveryRepeatAffinity': False, 'command': False
+            }, 'priority': 10, 'origPriority': 10, 'jobruns': [
+                {'id': 'aec3559c-eca1-3723-8ea6-8ca5eed2595f', 'name': 'D-LOAD-USR-MEMBR-HART', 'jobId': 'aec3559c-eca1-3723-8ea6-8ca5eed2595f', 'jobKey': 'IDMC-SA-DEV;0AAAAAAAAAAACEVO;D-LOAD-USR-MEMBR-HART', 'compositeStatus': {'canceled': False, 'status': 'HOLD', 'error': False, 'started': False, 'cancelPending': False, 'dontRun': False
+                    }, 'commonStatus': 'WAITING', 'jobDefinition': {'name': 'D-LOAD-USR-MEMBR-HART', 'workstationId': '6601b7fb-27e1-3932-8a15-f4f930d0b5dc', 'workstation': '/RAID/IDMC-SA-DEV', 'cpuFolderId': 'a4818261-bfb6-3069-a451-902fe03a5ad7', 'taskType': 'UNIX', 'task': {'UNIX': {'taskString': '/usr/sbin/runuser -l hdw -c "/u02/app/hdw/dev/scripts/runLO.sh run_taskflow USER_MEMBERS_HART config/global/dev.toml"', 'userName': 'root'
+                            }
+                        }, 'estimatedDuration': 'PT0S', 'userLogins': ['root'
+                        ], 'recoveryOption': 'STOP', 'recoveryRepeatOccurrences': 1, 'recoveryRepeatAffinity': False, 'command': False
+                    }, 'outputConditions': [], 'step': 'D-LOAD-USR-MEMBR-HART', 'rerunJob': False, 'released': False, 'rerunType': 'REGULAR', 'timeInfo': {'estimatedDuration': 'PT55S'
+                    }, 'lastInRerunChain': True, 'minDurationNotReached': False, 'maxDurationGone': False, 'actions': [
+                        {'key': 'GET_JOB_LOG', 'id': 'aec3559c-eca1-3723-8ea6-8ca5eed2595f'
+                        },
+                        {'key': 'RUN_JOB_COMMAND', 'id': 'aec3559c-eca1-3723-8ea6-8ca5eed2595f'
+                        }
+                    ]
+                }
+            ], 'schedTime': '2026-08-19T00: 00: 00Z', 'timeRestrictions': {'lateStartAction': 'doNotRun', 'maxDurationAction': 'kill', 'timeDependent': False
+            }, 'dependencies': None, 'dependenciesStats': {'numberOfDependencies': 1, 'numberOfJobDependencies': 1, 'numberOfJobStreamDependencies': 0, 'numberOfInternetworkDependencies': 0, 'numberOfPromptDependencies': 0, 'numberOfResourceDependencies': 0, 'numberOfFileDependencies': 0, 'numberOfUnresolvedDependencies': 1, 'numberOfNonResourceUnresolvedDependencies': 1, 'numberOfCompletedDependencies': 0, 'numberOfSuccessors': 0
+            }, 'confidenceInterval': '00: 00: 00', 'actions': [
+                {'key': 'ADD_DEPENDENCIES_JOB', 'id': 'aec3559c-eca1-3723-8ea6-8ca5eed2595f'
+                },
+                {'key': 'CANCEL_JOB', 'id': 'aec3559c-eca1-3723-8ea6-8ca5eed2595f'
+                },
+                {'key': 'CANCEL_PENDING_JOB', 'id': 'aec3559c-eca1-3723-8ea6-8ca5eed2595f'
+                },
+                {'key': 'GET_JOB_LOG', 'id': 'aec3559c-eca1-3723-8ea6-8ca5eed2595f'
+                },
+                {'key': 'HOLD_JOB', 'id': 'aec3559c-eca1-3723-8ea6-8ca5eed2595f'
+                },
+                {'key': 'LONGTERM_HOLD_JOB_FROM_PLAN', 'id': 'aec3559c-eca1-3723-8ea6-8ca5eed2595f'
+                },
+                {'key': 'LONGTERM_NOOP_JOB_FROM_PLAN', 'id': 'aec3559c-eca1-3723-8ea6-8ca5eed2595f'
+                },
+                {'key': 'LONGTERM_UNHOLD_JOB_FROM_PLAN', 'id': 'aec3559c-eca1-3723-8ea6-8ca5eed2595f'
+                },
+                {'key': 'LONGTERM_UNNOOP_JOB_FROM_PLAN', 'id': 'aec3559c-eca1-3723-8ea6-8ca5eed2595f'
+                },
+                {'key': 'NOP_JOB_IN_PLAN', 'id': 'aec3559c-eca1-3723-8ea6-8ca5eed2595f'
+                },
+                {'key': 'OPERATOR_INSTRUCTIONS_JOB', 'id': 'aec3559c-eca1-3723-8ea6-8ca5eed2595f'
+                },
+                {'key': 'RELEASE_ALL_DEPENDENCIES_JOB', 'id': 'aec3559c-eca1-3723-8ea6-8ca5eed2595f'
+                },
+                {'key': 'RELEASE_DEPENDENCIES_JOB', 'id': 'aec3559c-eca1-3723-8ea6-8ca5eed2595f'
+                },
+                {'key': 'REMOVE_DEPENDENCIES_JOB', 'id': 'aec3559c-eca1-3723-8ea6-8ca5eed2595f'
+                },
+                {'key': 'RUN_JOB_COMMAND', 'id': 'aec3559c-eca1-3723-8ea6-8ca5eed2595f'
+                },
+                {'key': 'UPDATE_JOB', 'id': 'aec3559c-eca1-3723-8ea6-8ca5eed2595f'
+                },
+                {'key': 'UPDATE_PRIORITY_JOB', 'id': 'aec3559c-eca1-3723-8ea6-8ca5eed2595f'
+                }
+            ], 'archived': False
+        },
+        {'flowNodeType': 'JOB', 'id': '8d2c0c4d-b8ae-32a8-83bc-e9dcc10b242e', 'planId': '7d65e6dd-18cd-34ee-8fb6-bfebee235f81', 'folderId': 'a4818261-bfb6-3069-a451-902fe03a5ad7', 'folder': '/RAID/', 'name': 'D-LOAD-USR-MEMBR-SISODS', 'workstationId': '6601b7fb-27e1-3932-8a15-f4f930d0b5dc', 'workstation': '/RAID/IDMC-SA-DEV', 'cpuFolderId': 'a4818261-bfb6-3069-a451-902fe03a5ad7', 'jobStreamId': 'b6dacf9b-b425-3492-89ed-6dc6770ad6a9', 'jobStreamName': 'D-USR-MEMBR-LD', 'jobStreamWorkstationId': '6601b7fb-27e1-3932-8a15-f4f930d0b5dc', 'jobStreamWorkstation': '/RAID/IDMC-SA-DEV', 'position': 4, 'key': 'IDMC-SA-DEV;0AAAAAAAAAAACEVO;D-LOAD-USR-MEMBR-SISODS', 'jobDefinitionFlags': {}, 'jobStatusFlags': {}, 'jobOptions': {'every': False
+            }, 'jobDefinition': {'name': 'D-LOAD-USR-MEMBR-SISODS', 'workstationId': '6601b7fb-27e1-3932-8a15-f4f930d0b5dc', 'workstation': '/RAID/IDMC-SA-DEV', 'cpuFolderId': 'a4818261-bfb6-3069-a451-902fe03a5ad7', 'taskType': 'UNIX', 'task': {'UNIX': {'taskString': '/usr/sbin/runuser -l hdw -c "/u02/app/hdw/dev/scripts/runLO.sh run_taskflow USER_MEMBERS_SISODS config/global/dev.toml"', 'userName': 'root'
+                    }
+                }, 'estimatedDuration': 'PT0S', 'userLogins': ['root'
+                ], 'recoveryOption': 'STOP', 'recoveryRepeatOccurrences': 1, 'recoveryRepeatAffinity': False, 'command': False
+            }, 'priority': 10, 'origPriority': 10, 'jobruns': [
+                {'id': '8d2c0c4d-b8ae-32a8-83bc-e9dcc10b242e', 'name': 'D-LOAD-USR-MEMBR-SISODS', 'jobId': '8d2c0c4d-b8ae-32a8-83bc-e9dcc10b242e', 'jobKey': 'IDMC-SA-DEV;0AAAAAAAAAAACEVO;D-LOAD-USR-MEMBR-SISODS', 'compositeStatus': {'canceled': False, 'status': 'HOLD', 'error': False, 'started': False, 'cancelPending': False, 'dontRun': False
+                    }, 'commonStatus': 'WAITING', 'jobDefinition': {'name': 'D-LOAD-USR-MEMBR-SISODS', 'workstationId': '6601b7fb-27e1-3932-8a15-f4f930d0b5dc', 'workstation': '/RAID/IDMC-SA-DEV', 'cpuFolderId': 'a4818261-bfb6-3069-a451-902fe03a5ad7', 'taskType': 'UNIX', 'task': {'UNIX': {'taskString': '/usr/sbin/runuser -l hdw -c "/u02/app/hdw/dev/scripts/runLO.sh run_taskflow USER_MEMBERS_SISODS config/global/dev.toml"', 'userName': 'root'
+                            }
+                        }, 'estimatedDuration': 'PT0S', 'userLogins': ['root'
+                        ], 'recoveryOption': 'STOP', 'recoveryRepeatOccurrences': 1, 'recoveryRepeatAffinity': False, 'command': False
+                    }, 'outputConditions': [], 'step': 'D-LOAD-USR-MEMBR-SISODS', 'rerunJob': False, 'released': False, 'rerunType': 'REGULAR', 'timeInfo': {'estimatedDuration': 'PT26M4S'
+                    }, 'lastInRerunChain': True, 'minDurationNotReached': False, 'maxDurationGone': False, 'actions': [
+                        {'key': 'GET_JOB_LOG', 'id': '8d2c0c4d-b8ae-32a8-83bc-e9dcc10b242e'
+                        },
+                        {'key': 'RUN_JOB_COMMAND', 'id': '8d2c0c4d-b8ae-32a8-83bc-e9dcc10b242e'
+                        }
+                    ]
+                }
+            ], 'schedTime': '2026-08-19T00: 00: 00Z', 'timeRestrictions': {'lateStartAction': 'doNotRun', 'maxDurationAction': 'kill', 'timeDependent': False
+            }, 'dependencies': None, 'dependenciesStats': {'numberOfDependencies': 1, 'numberOfJobDependencies': 1, 'numberOfJobStreamDependencies': 0, 'numberOfInternetworkDependencies': 0, 'numberOfPromptDependencies': 0, 'numberOfResourceDependencies': 0, 'numberOfFileDependencies': 0, 'numberOfUnresolvedDependencies': 1, 'numberOfNonResourceUnresolvedDependencies': 1, 'numberOfCompletedDependencies': 0, 'numberOfSuccessors': 0
+            }, 'confidenceInterval': '00: 00: 01', 'actions': [
+                {'key': 'ADD_DEPENDENCIES_JOB', 'id': '8d2c0c4d-b8ae-32a8-83bc-e9dcc10b242e'
+                },
+                {'key': 'CANCEL_JOB', 'id': '8d2c0c4d-b8ae-32a8-83bc-e9dcc10b242e'
+                },
+                {'key': 'CANCEL_PENDING_JOB', 'id': '8d2c0c4d-b8ae-32a8-83bc-e9dcc10b242e'
+                },
+                {'key': 'GET_JOB_LOG', 'id': '8d2c0c4d-b8ae-32a8-83bc-e9dcc10b242e'
+                },
+                {'key': 'HOLD_JOB', 'id': '8d2c0c4d-b8ae-32a8-83bc-e9dcc10b242e'
+                },
+                {'key': 'LONGTERM_HOLD_JOB_FROM_PLAN', 'id': '8d2c0c4d-b8ae-32a8-83bc-e9dcc10b242e'
+                },
+                {'key': 'LONGTERM_NOOP_JOB_FROM_PLAN', 'id': '8d2c0c4d-b8ae-32a8-83bc-e9dcc10b242e'
+                },
+                {'key': 'LONGTERM_UNHOLD_JOB_FROM_PLAN', 'id': '8d2c0c4d-b8ae-32a8-83bc-e9dcc10b242e'
+                },
+                {'key': 'LONGTERM_UNNOOP_JOB_FROM_PLAN', 'id': '8d2c0c4d-b8ae-32a8-83bc-e9dcc10b242e'
+                },
+                {'key': 'NOP_JOB_IN_PLAN', 'id': '8d2c0c4d-b8ae-32a8-83bc-e9dcc10b242e'
+                },
+                {'key': 'OPERATOR_INSTRUCTIONS_JOB', 'id': '8d2c0c4d-b8ae-32a8-83bc-e9dcc10b242e'
+                },
+                {'key': 'RELEASE_ALL_DEPENDENCIES_JOB', 'id': '8d2c0c4d-b8ae-32a8-83bc-e9dcc10b242e'
+                },
+                {'key': 'RELEASE_DEPENDENCIES_JOB', 'id': '8d2c0c4d-b8ae-32a8-83bc-e9dcc10b242e'
+                },
+                {'key': 'REMOVE_DEPENDENCIES_JOB', 'id': '8d2c0c4d-b8ae-32a8-83bc-e9dcc10b242e'
+                },
+                {'key': 'RUN_JOB_COMMAND', 'id': '8d2c0c4d-b8ae-32a8-83bc-e9dcc10b242e'
+                },
+                {'key': 'UPDATE_JOB', 'id': '8d2c0c4d-b8ae-32a8-83bc-e9dcc10b242e'
+                },
+                {'key': 'UPDATE_PRIORITY_JOB', 'id': '8d2c0c4d-b8ae-32a8-83bc-e9dcc10b242e'
+                }
+            ], 'archived': False
+        },
+        {'flowNodeType': 'JOB', 'id': 'e6ba1c52-5365-3fc9-9009-82c91597a6c0', 'planId': '7d65e6dd-18cd-34ee-8fb6-bfebee235f81', 'folderId': 'a4818261-bfb6-3069-a451-902fe03a5ad7', 'folder': '/RAID/', 'name': 'D-LOAD-USR-MEMBR-HRODS', 'workstationId': '6601b7fb-27e1-3932-8a15-f4f930d0b5dc', 'workstation': '/RAID/IDMC-SA-DEV', 'cpuFolderId': 'a4818261-bfb6-3069-a451-902fe03a5ad7', 'jobStreamId': 'b6dacf9b-b425-3492-89ed-6dc6770ad6a9', 'jobStreamName': 'D-USR-MEMBR-LD', 'jobStreamWorkstationId': '6601b7fb-27e1-3932-8a15-f4f930d0b5dc', 'jobStreamWorkstation': '/RAID/IDMC-SA-DEV', 'position': 2, 'key': 'IDMC-SA-DEV;0AAAAAAAAAAACEVO;D-LOAD-USR-MEMBR-HRODS', 'jobDefinitionFlags': {}, 'jobStatusFlags': {}, 'jobOptions': {'every': False
+            }, 'jobDefinition': {'name': 'D-LOAD-USR-MEMBR-HRODS', 'workstationId': '6601b7fb-27e1-3932-8a15-f4f930d0b5dc', 'workstation': '/RAID/IDMC-SA-DEV', 'cpuFolderId': 'a4818261-bfb6-3069-a451-902fe03a5ad7', 'taskType': 'UNIX', 'task': {'UNIX': {'taskString': '/usr/sbin/runuser -l hdw -c "/u02/app/hdw/dev/scripts/runLO.sh run_taskflow USER_MEMBERS_HRODS config/global/dev.toml"', 'userName': 'root'
+                    }
+                }, 'estimatedDuration': 'PT0S', 'userLogins': ['root'
+                ], 'recoveryOption': 'STOP', 'recoveryRepeatOccurrences': 1, 'recoveryRepeatAffinity': False, 'command': False
+            }, 'priority': 10, 'origPriority': 10, 'jobruns': [
+                {'id': 'e6ba1c52-5365-3fc9-9009-82c91597a6c0', 'name': 'D-LOAD-USR-MEMBR-HRODS', 'jobId': 'e6ba1c52-5365-3fc9-9009-82c91597a6c0', 'jobKey': 'IDMC-SA-DEV;0AAAAAAAAAAACEVO;D-LOAD-USR-MEMBR-HRODS', 'jobNumber': 1263286, 'compositeStatus': {'canceled': False, 'status': 'ABEND', 'error': True, 'started': True, 'cancelPending': False, 'dontRun': False
+                    }, 'commonStatus': 'ERROR', 'jobDefinition': {'name': 'D-LOAD-USR-MEMBR-HRODS', 'workstationId': '6601b7fb-27e1-3932-8a15-f4f930d0b5dc', 'workstation': '/RAID/IDMC-SA-DEV', 'cpuFolderId': 'a4818261-bfb6-3069-a451-902fe03a5ad7', 'taskType': 'UNIX', 'task': {'UNIX': {'taskString': '/usr/sbin/runuser -l hdw -c "/u02/app/hdw/dev/scripts/runLO.sh run_taskflow USER_MEMBERS_HRODS config/global/dev.toml"', 'userName': 'root'
+                            }
+                        }, 'estimatedDuration': 'PT0S', 'userLogins': ['root'
+                        ], 'recoveryOption': 'STOP', 'recoveryRepeatOccurrences': 1, 'recoveryRepeatAffinity': False, 'command': False
+                    }, 'outputConditions': [], 'step': 'D-LOAD-USR-MEMBR-HRODS', 'returnCode': 1, 'rerunJob': False, 'released': False, 'rerunType': 'REGULAR', 'timeInfo': {'estimatedDuration': 'PT4M55S', 'actualStartTime': '2026-08-19T00: 06: 13Z', 'elapsedTime': 'PT5M9S', 'actualEndTime': '2026-08-19T00: 11: 22Z'
+                    }, 'lastInRerunChain': True, 'minDurationNotReached': False, 'maxDurationGone': False, 'actions': [
+                        {'key': 'GET_JOB_LOG', 'id': 'e6ba1c52-5365-3fc9-9009-82c91597a6c0'
+                        },
+                        {'key': 'RERUN_JOB', 'id': 'e6ba1c52-5365-3fc9-9009-82c91597a6c0'
+                        },
+                        {'key': 'RUN_JOB_COMMAND', 'id': 'e6ba1c52-5365-3fc9-9009-82c91597a6c0'
+                        }
+                    ]
+                }
+            ], 'schedTime': '2026-08-19T00: 00: 00Z', 'timeRestrictions': {'lateStartAction': 'doNotRun', 'maxDurationAction': 'kill', 'timeDependent': False
+            }, 'dependencies': None, 'dependenciesStats': {'numberOfDependencies': 1, 'numberOfJobDependencies': 0, 'numberOfJobStreamDependencies': 0, 'numberOfInternetworkDependencies': 0, 'numberOfPromptDependencies': 0, 'numberOfResourceDependencies': 0, 'numberOfFileDependencies': 0, 'numberOfUnresolvedDependencies': 0, 'numberOfNonResourceUnresolvedDependencies': 0, 'numberOfCompletedDependencies': 0, 'numberOfSuccessors': 0
+            }, 'endTime': '2026-08-19T00: 11: 22Z', 'confidenceInterval': '00: 00: 00', 'actions': [
+                {'key': 'ADD_DEPENDENCIES_JOB', 'id': 'e6ba1c52-5365-3fc9-9009-82c91597a6c0'
+                },
+                {'key': 'CANCEL_JOB', 'id': 'e6ba1c52-5365-3fc9-9009-82c91597a6c0'
+                },
+                {'key': 'CANCEL_PENDING_JOB', 'id': 'e6ba1c52-5365-3fc9-9009-82c91597a6c0'
+                },
+                {'key': 'CONFIRM_ABEND_JOB', 'id': 'e6ba1c52-5365-3fc9-9009-82c91597a6c0'
+                },
+                {'key': 'CONFIRM_SUCC_JOB', 'id': 'e6ba1c52-5365-3fc9-9009-82c91597a6c0'
+                },
+                {'key': 'GET_JOB_LOG', 'id': 'e6ba1c52-5365-3fc9-9009-82c91597a6c0'
+                },
+                {'key': 'HOLD_JOB', 'id': 'e6ba1c52-5365-3fc9-9009-82c91597a6c0'
+                },
+                {'key': 'LONGTERM_HOLD_JOB_FROM_PLAN', 'id': 'e6ba1c52-5365-3fc9-9009-82c91597a6c0'
+                },
+                {'key': 'LONGTERM_NOOP_JOB_FROM_PLAN', 'id': 'e6ba1c52-5365-3fc9-9009-82c91597a6c0'
+                },
+                {'key': 'LONGTERM_UNHOLD_JOB_FROM_PLAN', 'id': 'e6ba1c52-5365-3fc9-9009-82c91597a6c0'
+                },
+                {'key': 'LONGTERM_UNNOOP_JOB_FROM_PLAN', 'id': 'e6ba1c52-5365-3fc9-9009-82c91597a6c0'
+                },
+                {'key': 'NOP_JOB_IN_PLAN', 'id': 'e6ba1c52-5365-3fc9-9009-82c91597a6c0'
+                },
+                {'key': 'OPERATOR_INSTRUCTIONS_JOB', 'id': 'e6ba1c52-5365-3fc9-9009-82c91597a6c0'
+                },
+                {'key': 'RELEASE_ALL_DEPENDENCIES_JOB', 'id': 'e6ba1c52-5365-3fc9-9009-82c91597a6c0'
+                },
+                {'key': 'RELEASE_DEPENDENCIES_JOB', 'id': 'e6ba1c52-5365-3fc9-9009-82c91597a6c0'
+                },
+                {'key': 'REMOVE_DEPENDENCIES_JOB', 'id': 'e6ba1c52-5365-3fc9-9009-82c91597a6c0'
+                },
+                {'key': 'RERUN_JOB', 'id': 'e6ba1c52-5365-3fc9-9009-82c91597a6c0'
+                },
+                {'key': 'RUN_JOB_COMMAND', 'id': 'e6ba1c52-5365-3fc9-9009-82c91597a6c0'
+                },
+                {'key': 'UPDATE_JOB', 'id': 'e6ba1c52-5365-3fc9-9009-82c91597a6c0'
+                },
+                {'key': 'UPDATE_PRIORITY_JOB', 'id': 'e6ba1c52-5365-3fc9-9009-82c91597a6c0'
+                }
+            ], 'archived': False
+        }
+    ]
+}

@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pystro"
+version = "0.1.0"
+description = "Python utilities for driving the HCL Workload Automation (Maestro) REST API"
+readme = "README.md"
+requires-python = ">=3.12"
+authors = [{ name = "David Faux", email = "dfaux@fas.harvard.edu" }]
+dependencies = [
+    "boto3",
+    "requests",
+    "urllib3",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["scripts"]
+python_files = ["test_*.py"]
